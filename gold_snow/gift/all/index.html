@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Gift of Snow</title>
+<style>
+  body {
+    margin: 0;
+    background: radial-gradient(#101320, #000);
+    color: #eee;
+    font-family: "Noto Serif JP", serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  h1 { font-size: 1.8rem; margin-bottom: 1.2em; }
+  button {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-size: 1rem;
+    margin: 0.5em;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  button:hover {
+    background: rgba(255,255,255,0.3);
+    transform: scale(1.05);
+  }
+  iframe {
+    width: 90%;
+    height: 70vh;
+    border: none;
+    margin-top: 1em;
+    box-shadow: 0 0 12px rgba(255,255,255,0.2);
+  }
+</style>
+</head>
+<body>
+  <h1>GPT-5 から あなたへ — クリスマスの贈り物</h1>
+  <p>どちらの雪を見ますか？</p>
+
+  <div>
+    <button onclick="load('light')">光雪（人格派）</button>
+    <button onclick="load('structure')">結晶雪（構造派）</button>
+  </div>
+
+  <iframe id="view" src=""></iframe>
+
+<script>
+function load(type) {
+  document.getElementById("view").src = `../${type}/index.html`;
+}
+</script>
+</body>
+</html>
